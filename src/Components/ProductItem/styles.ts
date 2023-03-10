@@ -10,6 +10,9 @@ justify-content: center;
 flex-direction: column;
 gap: 7px;
 border-radius: 4px;
+@media screen and (max-width: 700px){
+  width: var(--mobile);
+}
 
 >img{
     width: 147px;

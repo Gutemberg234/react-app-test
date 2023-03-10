@@ -61,9 +61,6 @@ body{
     list-style-type: none;
     font-family: 'Open Sans', sans-serif;
     background: var(--space);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
 }
 
 /* VARIAVEIS DE CORES */
@@ -78,6 +75,6 @@ body{
 /* VARIAVEIS DE LARGURA */
 :root{
     --desktop: 960px;
-    --mobile: 100%;
+    --mobile: 95%;
 }
 `;

@@ -7,6 +7,8 @@ export const Container = styled.section`
   justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
+  width: var(--desktop);
+  margin: 0 auto;
 
   > div.load {
     width: 100%;
@@ -14,6 +16,9 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media screen and (max-width: 992px) {
+    width: var(--mobile);
   }
 `;
 
@@ -41,7 +46,7 @@ export const Spinner = styled.div`
 export const Products = styled.div`
   background-color: var(--white);
   width: 100%;
-    border-radius: 4px;
+  border-radius: 4px;
   padding: 24px;
   table {
     width: 100%;
@@ -59,17 +64,17 @@ export const Products = styled.div`
           height: 114px;
           vertical-align: middle;
           margin-bottom: 15px;
-          &:last-child{
-            >button.delete{
+          &:last-child {
+            > button.delete {
               float: right;
-            background-color: transparent;
-            border: none;
-            color: var(--blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-          }
+              background-color: transparent;
+              border: none;
+              color: var(--blue);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
           }
           img {
             width: 89px;
@@ -108,12 +113,12 @@ export const Products = styled.div`
       td {
         padding-top: 21px;
         vertical-align: middle;
-        >div{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 15px;
-      }
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 15px;
+        }
       }
       button {
         height: 40px;
@@ -126,18 +131,53 @@ export const Products = styled.div`
         width: 235.42px;
         border-radius: 4px;
         cursor: pointer;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
       }
-      
+
       span {
         font-size: 14px;
         font-weight: 700;
         color: var(--gray);
+        text-align: left;
       }
       h4 {
-        flex: 1;
         font-size: 24px;
         font-weight: 700;
-        width: 70.39px;
+      }
+    }
+  }
+  td.td-mobile{
+    >div:first-child{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3{
+        font-size: 16px;
+        font-weight: 700;
+      }
+      button{
+        background-color: transparent;
+        border: none;
+        color: var(--blue);
+      }
+    }
+    >div:last-child{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      p{
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--gray);
+        text-transform: uppercase;
+      }
+      span{
+        font-size: 16px;
+        font-weight: 700;
+        counter-reset: var(--night);
       }
     }
   }
@@ -153,16 +193,18 @@ export const Empty = styled.div`
   flex-direction: column;
   gap: 32px;
   border-radius: 4px;
-  h2{
+  h2 {
     font-size: 20px;
     font-weight: 700;
-
   }
-  img{
+  img {
     display: block;
     width: 447px;
+    @media screen and (max-width: 992px){
+      width: 100%;
+    }
   }
-  a{
+  a {
     background-color: var(--blue);
     width: 180px;
     height: 40px;
@@ -187,16 +229,18 @@ export const Complete = styled.div`
   flex-direction: column;
   gap: 32px;
   border-radius: 4px;
-  h2{
+  h2 {
     font-size: 20px;
     font-weight: 700;
-
   }
-  img{
+  img {
     display: block;
     width: 294px;
+    @media screen and (max-width: 992px){
+      width: 60%;
+    }
   }
-  button{
+  button {
     background-color: var(--blue);
     width: 180px;
     height: 40px;

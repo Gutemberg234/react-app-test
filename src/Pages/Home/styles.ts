@@ -7,6 +7,8 @@ align-items: center;
 justify-content: flex-start;
 flex-direction: column;
 gap: 24px;
+width: var(--desktop);
+margin: 0 auto;
 
 >div.load{
     width: 100%;
@@ -14,11 +16,15 @@ gap: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-}    
+}
+
+@media screen and (max-width: 992px){
+  width: var(--mobile);
+}
 `;
 
 export const Spinner = styled.div`
-width: 55.41px;
+  width: 55.41px;
   height: 55.41px;
   border-radius: 50%;
   background: 
@@ -37,4 +43,12 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-column-gap: 16px;
 grid-row-gap: 16px;
+@media screen and (max-width: 992px){
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 700px){
+  grid-template-columns: repeat(1, 1fr);
+  width: var(--mobile);
+  padding-bottom: 20px;
+}
 `;

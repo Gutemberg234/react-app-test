@@ -29,4 +29,8 @@ export const Container = styled.header`
             font-size: 12px;
         }
     }
+
+    @media screen and (max-width: 992px){
+        width: 100%;
+    }
 `;
